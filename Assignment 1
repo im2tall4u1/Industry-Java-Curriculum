@@ -1,0 +1,15 @@
+class Currency {
+	int usd = 1;
+	
+	void compute() {
+		System.out.println("USD: " + usd);
+		System.out.println("Euro value in usd: " + (usd * .9));
+		System.out.println("Ruble value in usd: " + (usd * 73));
+		System.out.println("Yen value in usd: " + (usd * 127));
+	}
+
+	public static void main(String[] args) {
+			Currency c = new Currency();
+			c.compute();
+	}		
+}
