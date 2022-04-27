@@ -1,0 +1,21 @@
+class Student {
+	int id = 1000;
+	byte age = 18; //byte only goes from [-128, 127]
+	short rank = 165; 
+	long phone = 223_456_7890L; // You can put underscores in big numbers for readability
+	
+	void compute() {
+		int nextId = id + 1
+		
+		System.out.println("id: " + id);
+		System.out.println(nextId);
+		System.out.println("age: " + age);
+		System.out.println("Student rank: " + rank);
+		System.out.println("Student phone number: " + phone);
+	}	
+		
+	public static void main(String[] args) {
+			Student s = new Student();
+			s.compute(); //invokes compute 
+	}		
+}
