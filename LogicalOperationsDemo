@@ -1,0 +1,14 @@
+class logicalOperations {
+	
+	public static void main (String[] args)	{
+		int age = 37;
+		int salary = 85000;
+		boolean hasBadCredit = false;
+		
+		if (age > 35 && salary > 90000 && !hasBadCredit) {
+			System.out.println("Loan Approved!");
+		} else {
+			System.out.println("Loan not approved!");
+		}
+	}
+}		
