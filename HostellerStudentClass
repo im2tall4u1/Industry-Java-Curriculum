@@ -1,0 +1,47 @@
+public class Student {
+    protected int studentId;
+    protected String name;
+    protected int departmentId;
+    protected String gender;
+    protected String phone;
+
+    public void setStudentId(int student){ // void is setter 
+        studentId = 1;
+    }
+
+    public int getStudentId(){
+        return studentId;
+    }
+
+    public void setName(String studentName){
+        name = studentName;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public void setDepartmentId(int department){
+        departmentId = department;
+    }
+
+    public int getDepartmentId(){
+        return departmentId;
+    }
+
+    public void setGender(String studentGender){
+        gender = studentGender;
+    }
+
+    public String getGender(){
+        return gender;
+    }
+
+    public void setPhone(String studentPhone){
+        phone = studentPhone;
+    }
+
+    public String getPhone(){
+        return phone;
+    }
+}
