@@ -1,0 +1,24 @@
+public class Hosteller extends Student {
+    private String hostelName;
+    private int roomNumber;
+    public Hosteller(){
+        hostelName=" ";
+        roomNumber=0;
+    }
+
+    public void setHostelName(String hostel){
+        hostelName = hostel;
+    }
+
+    public String getHostelName(){
+        return hostelName;
+    }
+
+    public void setRoomNumber(int roomNum){
+        roomNumber = roomNum;
+    }
+
+    public int getRoomNumber(){
+        return roomNumber;
+    }
+}
