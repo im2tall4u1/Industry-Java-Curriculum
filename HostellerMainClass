@@ -1,0 +1,73 @@
+import java.util.*;
+
+public class Main {
+    public static Hosteller getHostellerDetails(){
+
+        Hosteller h1 = new Hosteller(); 
+
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Enter the Details: \n");
+        System.out.println("Student Id \n");
+        int studentId = keyboard.nextInt();
+
+
+
+
+        System.out.println("Student Name");
+        String name = keyboard.nextLine();
+
+        System.out.println("Department Id");
+        int departmentId = keyboard.nextInt();
+
+        System.out.println("Gender");
+        String gender = keyboard.nextLine();
+
+        System.out.println("Phone Number");
+        String phone = keyboard.nextLine();
+
+        System.out.println("Hostel Name");
+        String hostelName = keyboard.nextLine();
+
+        System.out.println("Room Number");
+        int roomNumber = keyboard.nextInt();
+        h1.setStudentId(roomNumber);
+        h1.setName(name);
+        h1.setDepartmentId(departmentId);
+        h1.setGender(gender);
+        h1.setPhone(phone);
+        h1.setHostelName(hostelName);
+        h1.setRoomNumber(roomNumber);
+
+
+
+        System.out.println("Modify Room Number(Y/N");
+        char modifyRoom = keyboard.next().charAt(0);
+        if (modifyRoom == 'Y'){
+            System.out.println("New Room Number");
+            int newRoomNum = keyboard.nextInt();
+            h1.setRoomNumber(newRoomNum);
+        }
+
+        
+
+
+        System.out.println("Modify Phone Number(Y/N)");
+        char modifyPhone = keyboard.next().charAt(0);
+        if (modifyPhone == 'N'){
+            System.out.println("New Phone Number");
+            keyboard.nextLine();
+            String newPhoneNum = keyboard.nextLine();
+            h1.setPhone(newPhoneNum); 
+
+        }
+        return h1;
+    }
+    public static void main(String[] args){
+        Hosteller h2 = new Hosteller();
+        h2 = getHostellerDetails();
+        System.out.println("The Student Details");
+        System.out.println(h2.getStudentId() + " " + h2.getName() + " " + h2.getDepartmentId() + " " + 
+        h2.getGender() + " " + h2.getPhone() + " " + h2.getHostelName() + " " + h2.getRoomNumber());
+    }
+
+}
