@@ -1,0 +1,43 @@
+public class Account {
+    // Attributes
+    private int accountId;
+    private String accountType;
+    private int balance;
+
+    // Getters and Setters
+    public int getAccountId(){
+        return accountId;
+    }
+
+    public void setAccountId(int id){
+        accountId = id;
+    }
+
+    public String getAccountType(){
+        return accountType;
+    }
+
+    public void setAccountType(String type){
+        accountType = type;
+    }
+
+    public int getBalance(){
+        return balance;
+    }
+
+    public void setBalance(int balanceBoys){
+        balance = balanceBoys;
+    }
+
+    public boolean withdraw(int enteredAmount){
+        if(getBalance() < enteredAmount){
+            System.out.println("Sorry!!! No enough balance");
+            return false;
+        } else {
+            System.out.println("Balance amount after withdraw: " + (getBalance() - enteredAmount));
+            return true;
+        }
+
+    }
+
+}
