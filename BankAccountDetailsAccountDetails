@@ -1,0 +1,44 @@
+import java.util.*;
+
+public class AccountDetails {
+    public static Account getAccountDetails(){
+        Account acc = new Account(); // new account object
+        Scanner keyboard = new Scanner(System.in); // input object
+        System.out.println("Enter account id: ");
+        acc.setAccountId(keyboard.nextInt()); // account id input being placed into account object
+        keyboard.nextLine();
+        System.out.println("Enter account type: "); // account type being placed into account object
+        acc.setAccountType(keyboard.nextLine());
+        int balance;
+
+        do{
+            System.out.println("Enter Balance");
+            acc.setBalance(keyboard.nextInt());
+            balance = acc.getBalance();
+            if(balance <= 0)
+            System.out.println("Balance should be positive");
+        }
+        while (balance <= 0);
+        return acc;
+        }
+
+        public static int getWithdrawAmount(){
+            Scanner keyboard = new Scanner(System.in);
+            int enteredAmount;
+            do{
+                System.out.println("Enter amount to be withdrawn: ");
+                enteredAmount = keyboard.nextInt();
+                if (enteredAmount <= 0)
+                System.out.println("Amount should be positive");
+            }
+            while (enteredAmount <= 0);
+            return enteredAmount;
+        }
+        public static void main (String[] args){
+            Account accObj = new Account();
+            accObj = getAccountDetails();
+            int withdrawAmount = getWithdrawAmount();
+            accObj.withdraw(withdrawAmount);
+        }
+
+    }
